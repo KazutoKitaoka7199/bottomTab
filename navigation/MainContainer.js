@@ -2,23 +2,23 @@ import React from 'react';
 import { View, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { Ionicons } from '@expo/vector-icons';
 
-import HomeScreen from './screens/HomeScreen';
-import DetailsScreen from './screens/DetailsScreen';
-import SettingsScreen from './screens/SettingScreen';
+import AddProductScreen from './screens/AddProductScreen';
+import CheckingScreen from './screens/CheckingScreen';
+import PaymentScreen from './screens/PaymentScreen';
+import BorrowScreen from './screens/BorrowScreen';
 
 const Tab = createBottomTabNavigator();
 
 export default function mainContainer() {
   return (
-    // <View>
-    //   <Text>Hello</Text>
-    // </View>
     <NavigationContainer>
       <Tab.Navigator>
-        <Tab.Screen name="Home" component={HomeScreen} />
-        <Tab.Screen name="Detail" component={DetailsScreen} />
-        <Tab.Screen name="Settings" component={SettingsScreen} />
+        <Tab.Screen name="資産運用" component={AddProductScreen} />
+        <Tab.Screen name="決済口座" component={CheckingScreen} />
+        <Tab.Screen name="入金" component={PaymentScreen} />
+        <Tab.Screen name="借入" component={BorrowScreen} />
       </Tab.Navigator>
     </NavigationContainer>
   )

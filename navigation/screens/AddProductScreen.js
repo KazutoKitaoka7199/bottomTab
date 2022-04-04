@@ -2,13 +2,13 @@ import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
 import { View, Text, StyleSheet,Alert } from 'react-native';
 
-export default function HomeScreen() {
+export default function AddProductScreen() {
   return (
-   <View>
+   <View style={styles.container}>
       <Text
-        style={styles.container}
-        onPress={() => Alert.alert('Home!!')}
-      >Home Screen</Text>
+        style={styles.text}
+        // onPress={() => navigation.navigate('Home')}
+      >AddProduct Screen</Text>
     </View> 
   )
 }
@@ -18,5 +18,9 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: 'blue',
+  },
+  text: {
+    color: '#ffffff'
   }
 })
